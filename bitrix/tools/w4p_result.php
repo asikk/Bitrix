@@ -47,7 +47,7 @@ if (CModule::IncludeModule('sale')) {
             "PS_STATUS_MESSAGE" => " - ",
             "PS_SUM" => $data['amount'],
             "PS_CURRENCY" => $data['currency'],
-            "PS_RESPONSE_DATE" => date("d.m.Y H:i:s"),
+            "PS_RESPONSE_DATE" => date("d.m.Y H:i:s"),//Date($CDatabase->DateFormatToPHP(CLang::GetDateFormat('FULL', LANG))),
         );
         CSaleOrder::Update($ORDER_ID, $arFields);
         $response = [
